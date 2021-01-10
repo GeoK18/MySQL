@@ -49,9 +49,6 @@ FROM(
 	SELECT from_Users_id, COUNT(*)  FROM friend_requests -- И друзей у таких пользователей мало
 	GROUP BY from_Users_id
 	UNION ALL
-	-- SELECT from_Users_id, COUNT(*)  FROM friend_requests 
-	-- GROUP BY from_Users_id
-	-- UNION ALL
 	SELECT Users_id, COUNT(*)  FROM users_communities
 	GROUP BY Users_id
 ) AS T
